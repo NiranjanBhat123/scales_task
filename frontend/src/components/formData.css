@@ -1,0 +1,56 @@
+.form-container {
+  background-color: #f8f9fa; /* Light grey */
+  color: #333; /* Dark grey */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; /* Increased padding for better spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30rem; /* Adjusted the width for better alignment */
+  margin: 20px auto; /* Center the form horizontally and add margin */
+}
+
+.form-container h2 {
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  color: #333; /* Dark grey */
+  text-align: center; /* Center align the heading */
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 25rem; /* Ensure the form takes full width */
+}
+
+.form-container label {
+  margin-bottom: 15px; /* Adjusted margin */
+  color: #666; /* Medium grey */
+  font-weight: bold; /* Make the label text bold */
+}
+
+.form-container input[type="text"] {
+  padding: 12px; /* Adjusted padding */
+  margin-bottom: 20px; /* Increased margin */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Adjusted width */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+.form-container button[type="submit"] {
+  padding: 12px 24px; /* Adjusted padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 10rem;
+  align-self: flex-end; /* Align the button to the right */
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
