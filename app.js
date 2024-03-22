@@ -1,5 +1,3 @@
-
-
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -8,15 +6,11 @@ const app = express();
 app.use(cors());
 const pairRouter = require("./routes/approuted");
 
+var bodyParser = require("body-parser");
 
-var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }));
 
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-
-// parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 mongoose
   .connect("mongodb://127.0.0.1/task", {
@@ -26,10 +20,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
-
-
 app.use("/api", pairRouter);
-
 
 app.use((err, req, res, next) => {
   console.error("Error:", err);

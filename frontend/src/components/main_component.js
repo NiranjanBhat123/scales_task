@@ -31,7 +31,7 @@ const CombinedFormAndData = () => {
         volume: volumeResponse[index].volume 
       }));
       
-      setCombinedData([...combinedData]); // Copy the array to trigger a re-render
+      setCombinedData([...combinedData]); 
     } catch (error) {
       console.error('Error fetching combined data:', error);
     }
@@ -41,7 +41,7 @@ const CombinedFormAndData = () => {
     try {
       await deleteData(`/api/pairs/${id}`);
       toast.success('Deletion successful');
-      fetchCombinedData(); // Fetch the updated data after deletion
+      fetchCombinedData(); 
     } catch (error) {
       console.error('Error deleting pair:', error);
       toast.error('Error deleting pair');
@@ -80,7 +80,7 @@ const CombinedFormAndData = () => {
       
       if (response) {
         console.log('Data inserted successfully');
-        toast.success('Data inserted successfully'); // Show success toast
+        toast.success('Data inserted successfully'); 
         setFormData({
           priceNative: '',
           priceUsd: '',
@@ -94,11 +94,11 @@ const CombinedFormAndData = () => {
         fetchCombinedData();
       } else {
         console.error('Failed to insert data:', response.statusText);
-        toast.error('Failed to insert data'); // Show error toast
+        toast.error('Failed to insert data');
       }
     } catch (error) {
       console.error('Network error:', error);
-      toast.error('Network error'); // Show network error toast
+      toast.error('Network error');
     }
   };
 

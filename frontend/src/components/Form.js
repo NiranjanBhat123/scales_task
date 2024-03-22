@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './formData.css';
-import { fetchData } from '../services/api'; // Assuming fetchData function is correctly implemented
-import { toast } from 'react-toastify'; // Assuming you have react-toastify installed
+import { fetchData } from '../services/api'; 
+import { toast } from 'react-toastify'; 
 
 const FormDataInput = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +47,7 @@ const FormDataInput = () => {
       
       if (response) {
         console.log('Data inserted successfully');
-        toast.success('Data inserted successfully'); // Show success toast
+        toast.success('Data inserted successfully');
         setFormData({
           priceNative: '',
           priceUsd: '',
@@ -60,11 +60,11 @@ const FormDataInput = () => {
         });
       } else {
         console.error('Failed to insert data:', response.statusText);
-        toast.error('Failed to insert data'); // Show error toast
+        toast.error('Failed to insert data'); 
       }
     } catch (error) {
       console.error('Network error:', error);
-      toast.error('Network error'); // Show network error toast
+      toast.error('Network error'); 
     }
   };
   
